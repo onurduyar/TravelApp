@@ -12,7 +12,6 @@ struct HotelModel: Decodable {
     let status: Status?
     let paging: Paging?
 }
-
 struct Hotel: Decodable {
     let locationID, name, latitude, longitude: String?
     enum CodingKeys: String, CodingKey {
@@ -20,8 +19,6 @@ struct Hotel: Decodable {
         case name, latitude, longitude
     }
 }
-
-// MARK: - Paging
 struct Paging: Decodable {
     let results, totalResults: String?
 
@@ -30,8 +27,6 @@ struct Paging: Decodable {
         case totalResults = "total_results"
     }
 }
-
-// MARK: - Status
 struct Status: Decodable {
     let unfilteredTotalSize, commerceCountryISOCode: String?
     let autobroadened: Bool?

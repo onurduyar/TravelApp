@@ -16,8 +16,6 @@ struct RestaurantModel: Decodable {
         case paging
     }
 }
-
-// MARK: - Datum
 struct Restaurant: Decodable {
     let locationID, name, latitude, longitude: String?
     let numReviews, timezone, locationString: String?

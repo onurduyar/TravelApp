@@ -27,6 +27,8 @@
 		784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360DD2A45BF1E009962D5 /* AttractionModel.swift */; };
 		784360E12A45C60B009962D5 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360E02A45C60B009962D5 /* WeatherRequest.swift */; };
 		784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360E32A45C66F009962D5 /* WeatherModel.swift */; };
+		784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */; };
+		784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CEB2A46011E00C9D553 /* PlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		784360DD2A45BF1E009962D5 /* AttractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionModel.swift; sourceTree = "<group>"; };
 		784360E02A45C60B009962D5 /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		784360E32A45C66F009962D5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRequest.swift; sourceTree = "<group>"; };
+		784B1CEB2A46011E00C9D553 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 				784360D42A44B49D009962D5 /* APIRequest.swift */,
 				784360D62A44B6D7009962D5 /* TravelRequest.swift */,
 				784360E02A45C60B009962D5 /* WeatherRequest.swift */,
+				784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 		784360DF2A45C1AC009962D5 /* TravelModels */ = {
 			isa = PBXGroup;
 			children = (
+				784B1CEB2A46011E00C9D553 /* PlaceModel.swift */,
 				784360DD2A45BF1E009962D5 /* AttractionModel.swift */,
 				784360DB2A45BA23009962D5 /* RestaurantModel.swift */,
 				784360D82A44BB43009962D5 /* HotelModel.swift */,
@@ -396,6 +402,7 @@
 			files = (
 				784360952A44A9C8009962D5 /* ViewController.swift in Sources */,
 				784360D92A44BB43009962D5 /* HotelModel.swift in Sources */,
+				784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */,
 				784360912A44A9C8009962D5 /* AppDelegate.swift in Sources */,
 				784360D22A44B368009962D5 /* NetworkService.swift in Sources */,
 				784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */,
@@ -409,6 +416,7 @@
 				784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */,
 				784360E12A45C60B009962D5 /* WeatherRequest.swift in Sources */,
 				784360CB2A44B333009962D5 /* Endpoint.swift in Sources */,
+				784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

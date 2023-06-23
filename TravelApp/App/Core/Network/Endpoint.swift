@@ -17,5 +17,9 @@ enum Endpoint {
         case weather = "/weather"
         case metric = "metric"
     }
+    enum Geoapify: String{
+        case version = "/v2"
+        case places = "/places"
+    }
 }
 

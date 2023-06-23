@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct AttractionModel: Decodable {
     let data: [Attraction]?
     let paging: Paging?
@@ -15,8 +16,6 @@ struct AttractionModel: Decodable {
         case paging
     }
 }
-
-// MARK: - Datum
 struct Attraction: Decodable {
     let locationID, name, latitude, longitude: String?
 
