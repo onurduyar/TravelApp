@@ -10,6 +10,7 @@ import Foundation
 protocol APIRequest: DataRequest {
     associatedtype Response
     var baseURL: String { get }
+    var path: String {get}
     var method: HTTPMethod { get }
 }
 
@@ -17,9 +18,9 @@ extension APIRequest {
     var baseURL: String {
         ""
     }
-    
+   
     var url: String {
-        ""
+        "\(path)"
     }
     
     var headers: [String : String] {

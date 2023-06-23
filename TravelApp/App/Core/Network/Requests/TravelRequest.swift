@@ -19,6 +19,9 @@ struct TravelRequest<T: Decodable>: APIRequest {
     var baseURL: String{
         "https://travel-advisor.p.rapidapi.com"
     }
+    var path: String{
+        ""
+    }
     var headers: [String : String] {
         guard let travelAPI_KEY = ProcessInfo.processInfo.environment["travelAPI_KEY"] else {
             fatalError(ErrorResponse.apiKeyMissing.rawValue)
