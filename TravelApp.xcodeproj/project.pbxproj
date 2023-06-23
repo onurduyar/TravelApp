@@ -20,6 +20,11 @@
 		784360CD2A44B33E009962D5 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360CC2A44B33E009962D5 /* ErrorResponse.swift */; };
 		784360CF2A44B34A009962D5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360CE2A44B34A009962D5 /* HTTPMethod.swift */; };
 		784360D22A44B368009962D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D12A44B368009962D5 /* NetworkService.swift */; };
+		784360D52A44B49D009962D5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D42A44B49D009962D5 /* APIRequest.swift */; };
+		784360D72A44B6D7009962D5 /* TravelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D62A44B6D7009962D5 /* TravelRequest.swift */; };
+		784360D92A44BB43009962D5 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D82A44BB43009962D5 /* HotelModel.swift */; };
+		784360DC2A45BA23009962D5 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360DB2A45BA23009962D5 /* RestaurantModel.swift */; };
+		784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360DD2A45BF1E009962D5 /* AttractionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		784360CC2A44B33E009962D5 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		784360CE2A44B34A009962D5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		784360D12A44B368009962D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		784360D42A44B49D009962D5 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		784360D62A44B6D7009962D5 /* TravelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRequest.swift; sourceTree = "<group>"; };
+		784360D82A44BB43009962D5 /* HotelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
+		784360DB2A45BA23009962D5 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		784360DD2A45BF1E009962D5 /* AttractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,7 @@
 		784360C12A44AA7F009962D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				784360DA2A45B9F4009962D5 /* Models */,
 				784360942A44A9C8009962D5 /* ViewController.swift */,
 			);
 			path = Screens;
@@ -194,6 +205,7 @@
 		784360C72A44B2F0009962D5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				784360D32A44B492009962D5 /* Requests */,
 				784360D02A44B35B009962D5 /* Services */,
 				784360C82A44B32A009962D5 /* DataRequest.swift */,
 				784360CA2A44B333009962D5 /* Endpoint.swift */,
@@ -209,6 +221,33 @@
 				784360D12A44B368009962D5 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		784360D32A44B492009962D5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				784360D42A44B49D009962D5 /* APIRequest.swift */,
+				784360D62A44B6D7009962D5 /* TravelRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		784360DA2A45B9F4009962D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				784360DF2A45C1AC009962D5 /* TravelModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		784360DF2A45C1AC009962D5 /* TravelModels */ = {
+			isa = PBXGroup;
+			children = (
+				784360DD2A45BF1E009962D5 /* AttractionModel.swift */,
+				784360DB2A45BA23009962D5 /* RestaurantModel.swift */,
+				784360D82A44BB43009962D5 /* HotelModel.swift */,
+			);
+			path = TravelModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,12 +381,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				784360952A44A9C8009962D5 /* ViewController.swift in Sources */,
+				784360D92A44BB43009962D5 /* HotelModel.swift in Sources */,
 				784360912A44A9C8009962D5 /* AppDelegate.swift in Sources */,
 				784360D22A44B368009962D5 /* NetworkService.swift in Sources */,
 				784360CF2A44B34A009962D5 /* HTTPMethod.swift in Sources */,
+				784360D72A44B6D7009962D5 /* TravelRequest.swift in Sources */,
 				784360932A44A9C8009962D5 /* SceneDelegate.swift in Sources */,
 				784360CD2A44B33E009962D5 /* ErrorResponse.swift in Sources */,
 				784360C92A44B32A009962D5 /* DataRequest.swift in Sources */,
+				784360D52A44B49D009962D5 /* APIRequest.swift in Sources */,
+				784360DC2A45BA23009962D5 /* RestaurantModel.swift in Sources */,
+				784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */,
 				784360CB2A44B333009962D5 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
