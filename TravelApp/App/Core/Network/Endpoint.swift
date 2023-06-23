@@ -6,5 +6,10 @@
 //
 
 enum Endpoint {
-    
+    enum Travel:String{
+        case hotel = "hotels"
+        case restaurant = "restaurants"
+        case attraction = "attractions"
+    }
 }
+
