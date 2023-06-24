@@ -29,6 +29,9 @@
 		784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360E32A45C66F009962D5 /* WeatherModel.swift */; };
 		784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */; };
 		784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CEB2A46011E00C9D553 /* PlaceModel.swift */; };
+		78ED75D92A46F36400FC75D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */; };
+		78ED75DB2A47107700FC75D6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75DA2A47107700FC75D6 /* SplashVC.swift */; };
+		78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75E22A472C9300FC75D6 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		784360E32A45C66F009962D5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRequest.swift; sourceTree = "<group>"; };
 		784B1CEB2A46011E00C9D553 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		78ED75DA2A47107700FC75D6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		78ED75E22A472C9300FC75D6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +169,10 @@
 		784360C12A44AA7F009962D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				78ED75DE2A472C3D00FC75D6 /* SplashScreen */,
+				78ED75E12A472C6600FC75D6 /* HomeScreen */,
 				784360DA2A45B9F4009962D5 /* Models */,
-				784360942A44A9C8009962D5 /* ViewController.swift */,
+				78ED75D72A46F34600FC75D6 /* ViewModels */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -268,6 +276,47 @@
 				784360E32A45C66F009962D5 /* WeatherModel.swift */,
 			);
 			path = WeatherModels;
+			sourceTree = "<group>";
+		};
+		78ED75D72A46F34600FC75D6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */,
+			);
+			path = "\U0010ViewModels";
+			sourceTree = "<group>";
+		};
+		78ED75DE2A472C3D00FC75D6 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75DF2A472C4700FC75D6 /* View */,
+				78ED75E02A472C4E00FC75D6 /* Controller */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		78ED75DF2A472C4700FC75D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E22A472C9300FC75D6 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78ED75E02A472C4E00FC75D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75DA2A47107700FC75D6 /* SplashVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		78ED75E12A472C6600FC75D6 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				784360942A44A9C8009962D5 /* ViewController.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,11 +450,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				784360952A44A9C8009962D5 /* ViewController.swift in Sources */,
+				78ED75D92A46F36400FC75D6 /* HomeViewModel.swift in Sources */,
 				784360D92A44BB43009962D5 /* HotelModel.swift in Sources */,
 				784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */,
 				784360912A44A9C8009962D5 /* AppDelegate.swift in Sources */,
 				784360D22A44B368009962D5 /* NetworkService.swift in Sources */,
 				784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */,
+				78ED75DB2A47107700FC75D6 /* SplashVC.swift in Sources */,
 				784360CF2A44B34A009962D5 /* HTTPMethod.swift in Sources */,
 				784360D72A44B6D7009962D5 /* TravelRequest.swift in Sources */,
 				784360932A44A9C8009962D5 /* SceneDelegate.swift in Sources */,
@@ -415,6 +466,7 @@
 				784360DC2A45BA23009962D5 /* RestaurantModel.swift in Sources */,
 				784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */,
 				784360E12A45C60B009962D5 /* WeatherRequest.swift in Sources */,
+				78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */,
 				784360CB2A44B333009962D5 /* Endpoint.swift in Sources */,
 				784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */,
 			);
@@ -514,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -568,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
