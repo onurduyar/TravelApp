@@ -17,8 +17,6 @@ class SplashVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        HomeViewModel.shared.fetchWeatherData(lat: "38.7205", lon: "35.4826")
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let mainViewController = ViewController()
             mainViewController.modalTransitionStyle = .flipHorizontal
