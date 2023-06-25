@@ -22,19 +22,17 @@ class ViewController: UIViewController {
             cardView.selectedWeatherStore.selectedWeather = currentCity
         }
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let homeView = HomeView(cardView: cardView)
         view = homeView
         locationManager.checkLocationPermission()
         homeViewModel.delegate = self
+        homeView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-  
 }
 
 // MARK: - WeatherViewModelDelegate
@@ -55,5 +53,23 @@ extension ViewController: WeatherViewModelDelegate {
 extension ViewController: LocationManagerDelegate{
     func didUpdateLocation(latitude: String, longitude: String) {
         homeViewModel.fetchWeatherData(lat: latitude, lon: longitude)
+    }
+}
+
+extension ViewController: HomeViewDelegate{
+    func didSelectCircle(withTag tag: Int) {
+        switch tag {
+        case 0:
+            print("hostel")
+            break
+        case 1:
+            print("restaurant")
+            break
+        case 2:
+            print("attractions")
+            break
+        default:
+            break
+        }
     }
 }
