@@ -6,21 +6,34 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
+    
     let homeViewModel = HomeViewModel.shared
+    private lazy var locationManager: LocationManager = {
+        let manager = LocationManager()
+        manager.delegate = self
+        return manager
+    }()
     var currentCity: WeatherElement?{
         didSet{
-            print(currentCity)
+            print(currentCity ?? "")
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        locationManager.checkLocationPermission()
         homeViewModel.delegate = self
-        HomeViewModel.shared.fetchWeatherData(lat: "38.7205", lon: "35.4826")
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
 }
+// MARK: - WeatherViewModelDelegate
 extension ViewController: WeatherViewModelDelegate {
     func weatherDataDidChange(_ viewModel: HomeViewModel) {
         DispatchQueue.main.async {
@@ -33,6 +46,10 @@ extension ViewController: WeatherViewModelDelegate {
             fatalError(error.localizedDescription)
         }
     }
-    
-  
+}
+// MARK: - LocationManagerDelegate
+extension ViewController: LocationManagerDelegate{
+    func didUpdateLocation(latitude: String, longitude: String) {
+        homeViewModel.fetchWeatherData(lat: latitude, lon: longitude)
+    }
 }

@@ -32,6 +32,7 @@
 		78ED75D92A46F36400FC75D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */; };
 		78ED75DB2A47107700FC75D6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75DA2A47107700FC75D6 /* SplashVC.swift */; };
 		78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75E22A472C9300FC75D6 /* SplashView.swift */; };
+		78ED75E62A4831B700FC75D6 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		78ED75DA2A47107700FC75D6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		78ED75E22A472C9300FC75D6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		784360C62A44B2EA009962D5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				78ED75E42A48317A00FC75D6 /* Helpers */,
 				784360C72A44B2F0009962D5 /* Network */,
 			);
 			path = Core;
@@ -317,6 +320,14 @@
 				784360942A44A9C8009962D5 /* ViewController.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		78ED75E42A48317A00FC75D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +480,7 @@
 				78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */,
 				784360CB2A44B333009962D5 /* Endpoint.swift in Sources */,
 				784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */,
+				78ED75E62A4831B700FC75D6 /* UserLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
