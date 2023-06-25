@@ -57,6 +57,28 @@ struct Sys: Codable {
 struct Weather: Codable {
     let id: Int?
     let main, description, icon: String?
+    var conditionName: String {
+        guard let id else{return ""}
+        switch id {
+        case 200...232:
+            return "cloud.bolt"
+        case 300...321:
+            return "cloud.drizzle"
+        case 500...531:
+            return "cloud.rain"
+        case 600...622:
+            return "cloud.snow"
+        case 701...781:
+            return "cloud.fog"
+        case 800:
+            return "sun.max"
+        case 801...804:
+            return "cloud.bolt"
+        default:
+            return "cloud"
+        }
+    }
+    
 }
 
 // MARK: - Wind
@@ -64,3 +86,5 @@ struct Wind: Codable {
     let speed: Double?
     let deg: Int?
 }
+
+

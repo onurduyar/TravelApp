@@ -7,9 +7,10 @@
 
 import UIKit
 import CoreLocation
+import SwiftUI
 
 class ViewController: UIViewController {
-    
+    var cardView = CardView(selectedWeatherStore: SelectedWeatherStore() )
     let homeViewModel = HomeViewModel.shared
     private lazy var locationManager: LocationManager = {
         let manager = LocationManager()
@@ -18,21 +19,24 @@ class ViewController: UIViewController {
     }()
     var currentCity: WeatherElement?{
         didSet{
-            print(currentCity ?? "")
+            cardView.selectedWeatherStore.selectedWeather = currentCity
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        
+        let homeView = HomeView(cardView: cardView)
+        view = homeView
         locationManager.checkLocationPermission()
         homeViewModel.delegate = self
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
+  
 }
+
 // MARK: - WeatherViewModelDelegate
 extension ViewController: WeatherViewModelDelegate {
     func weatherDataDidChange(_ viewModel: HomeViewModel) {
@@ -40,13 +44,13 @@ extension ViewController: WeatherViewModelDelegate {
             self.currentCity = viewModel.city
         }
     }
-    
     func weatherDataFetchDidFail(_ viewModel: HomeViewModel, withError error: Error) {
         DispatchQueue.main.async {
             fatalError(error.localizedDescription)
         }
     }
 }
+
 // MARK: - LocationManagerDelegate
 extension ViewController: LocationManagerDelegate{
     func didUpdateLocation(latitude: String, longitude: String) {

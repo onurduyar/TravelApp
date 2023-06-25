@@ -25,6 +25,7 @@ struct WeatherRequest: APIRequest {
             "appid": appID,
             "lat": lat,
             "lon": lon,
+            "units": Endpoint.Weather.metric.rawValue
         ]
     }
     init(lat: String, lon: String) {
