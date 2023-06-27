@@ -17,6 +17,7 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if selectedWeatherStore.selectedWeather == nil {
+                ProgressView()
             } else {
                 RoundedRectangle(cornerRadius: 8.0)
                     .foregroundColor(.white)

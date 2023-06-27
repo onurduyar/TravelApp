@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         locationManager.checkLocationPermission()
         homeViewModel.delegate = self
         homeView.delegate = self
+        homeView.activityIndicator.startAnimating()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,6 +41,7 @@ extension ViewController: WeatherViewModelDelegate {
     func weatherDataDidChange(_ viewModel: HomeViewModel) {
         DispatchQueue.main.async {
             self.currentCity = viewModel.city
+
         }
     }
     func weatherDataFetchDidFail(_ viewModel: HomeViewModel, withError error: Error) {
@@ -55,8 +57,34 @@ extension ViewController: LocationManagerDelegate{
         homeViewModel.fetchWeatherData(lat: latitude, lon: longitude)
     }
 }
-
+// MARK: - HomeViewDelegate
 extension ViewController: HomeViewDelegate{
+    func didSelectShoppingRectangle(withTag tag: Int) {
+        switch tag {
+        case 0:
+            print("shopping mal")
+            break
+        case 1:
+            print("supermarket")
+            break
+        default:
+            break
+        }
+    }
+    
+    func didSelectTransportationRectangle(withTag tag: Int) {
+        switch tag {
+        case 0:
+            print("airport")
+            break
+        case 1:
+            print("trainstation")
+            break
+        default:
+            break
+        }
+    }
+    
     func didSelectCircle(withTag tag: Int) {
         switch tag {
         case 0:
@@ -71,5 +99,10 @@ extension ViewController: HomeViewDelegate{
         default:
             break
         }
+    }
+}
+class ViewController2: UIViewController{
+    override func viewDidLoad() {
+        view.backgroundColor = .red
     }
 }
