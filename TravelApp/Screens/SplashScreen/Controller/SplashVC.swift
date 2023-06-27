@@ -18,7 +18,7 @@ class SplashVC: UIViewController {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let mainViewController = ViewController()
+            let mainViewController = HomeVC()
             mainViewController.modalTransitionStyle = .flipHorizontal
             mainViewController.modalPresentationStyle = .fullScreen
             

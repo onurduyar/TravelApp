@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import SwiftUI
 
-class ViewController: UIViewController {
+final class HomeVC: UIViewController {
     var cardView = CardView(selectedWeatherStore: SelectedWeatherStore() )
     let homeViewModel = HomeViewModel.shared
     private lazy var locationManager: LocationManager = {
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         homeViewModel.delegate = self
         homeView.delegate = self
         homeView.activityIndicator.startAnimating()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - WeatherViewModelDelegate
-extension ViewController: WeatherViewModelDelegate {
+extension HomeVC: WeatherViewModelDelegate {
     func weatherDataDidChange(_ viewModel: HomeViewModel) {
         DispatchQueue.main.async {
             self.currentCity = viewModel.city
@@ -52,17 +53,18 @@ extension ViewController: WeatherViewModelDelegate {
 }
 
 // MARK: - LocationManagerDelegate
-extension ViewController: LocationManagerDelegate{
+extension HomeVC: LocationManagerDelegate{
     func didUpdateLocation(latitude: String, longitude: String) {
         homeViewModel.fetchWeatherData(lat: latitude, lon: longitude)
     }
 }
 // MARK: - HomeViewDelegate
-extension ViewController: HomeViewDelegate{
+extension HomeVC: HomeViewDelegate{
     func didSelectShoppingRectangle(withTag tag: Int) {
         switch tag {
         case 0:
             print("shopping mal")
+            navigationController?.pushViewController(DetailVC(), animated: true)
             break
         case 1:
             print("supermarket")
