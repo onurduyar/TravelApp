@@ -15,6 +15,27 @@
 		784360A82A44A9C9009962D5 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360A72A44A9C9009962D5 /* TravelAppTests.swift */; };
 		784360B22A44A9C9009962D5 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360B12A44A9C9009962D5 /* TravelAppUITests.swift */; };
 		784360B42A44A9C9009962D5 /* TravelAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360B32A44A9C9009962D5 /* TravelAppUITestsLaunchTests.swift */; };
+		784360C92A44B32A009962D5 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360C82A44B32A009962D5 /* DataRequest.swift */; };
+		784360CB2A44B333009962D5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360CA2A44B333009962D5 /* Endpoint.swift */; };
+		784360CD2A44B33E009962D5 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360CC2A44B33E009962D5 /* ErrorResponse.swift */; };
+		784360CF2A44B34A009962D5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360CE2A44B34A009962D5 /* HTTPMethod.swift */; };
+		784360D22A44B368009962D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D12A44B368009962D5 /* NetworkService.swift */; };
+		784360D52A44B49D009962D5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D42A44B49D009962D5 /* APIRequest.swift */; };
+		784360D72A44B6D7009962D5 /* TravelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D62A44B6D7009962D5 /* TravelRequest.swift */; };
+		784360D92A44BB43009962D5 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360D82A44BB43009962D5 /* HotelModel.swift */; };
+		784360DC2A45BA23009962D5 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360DB2A45BA23009962D5 /* RestaurantModel.swift */; };
+		784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360DD2A45BF1E009962D5 /* AttractionModel.swift */; };
+		784360E12A45C60B009962D5 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360E02A45C60B009962D5 /* WeatherRequest.swift */; };
+		784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784360E32A45C66F009962D5 /* WeatherModel.swift */; };
+		784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */; };
+		784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B1CEB2A46011E00C9D553 /* PlaceModel.swift */; };
+		78ED75D92A46F36400FC75D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */; };
+		78ED75DB2A47107700FC75D6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75DA2A47107700FC75D6 /* SplashVC.swift */; };
+		78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75E22A472C9300FC75D6 /* SplashView.swift */; };
+		78ED75E62A4831B700FC75D6 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */; };
+		78ED75EC2A483C3700FC75D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75EB2A483C3700FC75D6 /* HomeView.swift */; };
+		78ED75EF2A4840A000FC75D6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 78ED75EE2A4840A000FC75D6 /* SnapKit */; };
+		78ED75F12A48474A00FC75D6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED75F02A48474A00FC75D6 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +68,26 @@
 		784360AD2A44A9C9009962D5 /* TravelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		784360B12A44A9C9009962D5 /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		784360B32A44A9C9009962D5 /* TravelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		784360C82A44B32A009962D5 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		784360CA2A44B333009962D5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		784360CC2A44B33E009962D5 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		784360CE2A44B34A009962D5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		784360D12A44B368009962D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		784360D42A44B49D009962D5 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		784360D62A44B6D7009962D5 /* TravelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRequest.swift; sourceTree = "<group>"; };
+		784360D82A44BB43009962D5 /* HotelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
+		784360DB2A45BA23009962D5 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		784360DD2A45BF1E009962D5 /* AttractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionModel.swift; sourceTree = "<group>"; };
+		784360E02A45C60B009962D5 /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		784360E32A45C66F009962D5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRequest.swift; sourceTree = "<group>"; };
+		784B1CEB2A46011E00C9D553 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		78ED75DA2A47107700FC75D6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		78ED75E22A472C9300FC75D6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
+		78ED75EB2A483C3700FC75D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		78ED75F02A48474A00FC75D6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED75EF2A4840A000FC75D6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +165,7 @@
 		784360C02A44AA7A009962D5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				784360C62A44B2EA009962D5 /* Core */,
 				784360C52A44AAA9009962D5 /* Views */,
 				784360C42A44AAA3009962D5 /* Assets */,
 				784360C32A44AA94009962D5 /* Plists */,
@@ -134,7 +177,10 @@
 		784360C12A44AA7F009962D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				784360942A44A9C8009962D5 /* ViewController.swift */,
+				78ED75DE2A472C3D00FC75D6 /* SplashScreen */,
+				78ED75E12A472C6600FC75D6 /* HomeScreen */,
+				784360DA2A45B9F4009962D5 /* Models */,
+				78ED75D72A46F34600FC75D6 /* ViewModels */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,6 +218,142 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		784360C62A44B2EA009962D5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E42A48317A00FC75D6 /* Helpers */,
+				784360C72A44B2F0009962D5 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		784360C72A44B2F0009962D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				784360D32A44B492009962D5 /* Requests */,
+				784360D02A44B35B009962D5 /* Services */,
+				784360C82A44B32A009962D5 /* DataRequest.swift */,
+				784360CA2A44B333009962D5 /* Endpoint.swift */,
+				784360CC2A44B33E009962D5 /* ErrorResponse.swift */,
+				784360CE2A44B34A009962D5 /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		784360D02A44B35B009962D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				784360D12A44B368009962D5 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		784360D32A44B492009962D5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				784360D42A44B49D009962D5 /* APIRequest.swift */,
+				784360D62A44B6D7009962D5 /* TravelRequest.swift */,
+				784360E02A45C60B009962D5 /* WeatherRequest.swift */,
+				784B1CE92A45FC4400C9D553 /* PlaceRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		784360DA2A45B9F4009962D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				784360E22A45C663009962D5 /* WeatherModels */,
+				784360DF2A45C1AC009962D5 /* TravelModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		784360DF2A45C1AC009962D5 /* TravelModels */ = {
+			isa = PBXGroup;
+			children = (
+				784B1CEB2A46011E00C9D553 /* PlaceModel.swift */,
+				784360DD2A45BF1E009962D5 /* AttractionModel.swift */,
+				784360DB2A45BA23009962D5 /* RestaurantModel.swift */,
+				784360D82A44BB43009962D5 /* HotelModel.swift */,
+			);
+			path = TravelModels;
+			sourceTree = "<group>";
+		};
+		784360E22A45C663009962D5 /* WeatherModels */ = {
+			isa = PBXGroup;
+			children = (
+				784360E32A45C66F009962D5 /* WeatherModel.swift */,
+			);
+			path = WeatherModels;
+			sourceTree = "<group>";
+		};
+		78ED75D72A46F34600FC75D6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75D82A46F36400FC75D6 /* HomeViewModel.swift */,
+			);
+			path = "\U0010ViewModels";
+			sourceTree = "<group>";
+		};
+		78ED75DE2A472C3D00FC75D6 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75DF2A472C4700FC75D6 /* View */,
+				78ED75E02A472C4E00FC75D6 /* Controller */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		78ED75DF2A472C4700FC75D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E22A472C9300FC75D6 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78ED75E02A472C4E00FC75D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75DA2A47107700FC75D6 /* SplashVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		78ED75E12A472C6600FC75D6 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E92A483C1D00FC75D6 /* View */,
+				78ED75EA2A483C2100FC75D6 /* Controller */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		78ED75E42A48317A00FC75D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75E52A4831B700FC75D6 /* UserLocationManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		78ED75E92A483C1D00FC75D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78ED75EB2A483C3700FC75D6 /* HomeView.swift */,
+				78ED75F02A48474A00FC75D6 /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78ED75EA2A483C2100FC75D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				784360942A44A9C8009962D5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +370,9 @@
 			dependencies = (
 			);
 			name = TravelApp;
+			packageProductDependencies = (
+				78ED75EE2A4840A000FC75D6 /* SnapKit */,
+			);
 			productName = TravelApp;
 			productReference = 7843608D2A44A9C8009962D5 /* TravelApp.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +445,9 @@
 				Base,
 			);
 			mainGroup = 784360842A44A9C8009962D5;
+			packageReferences = (
+				78ED75ED2A4840A000FC75D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7843608E2A44A9C8009962D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,8 +491,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				784360952A44A9C8009962D5 /* ViewController.swift in Sources */,
+				78ED75D92A46F36400FC75D6 /* HomeViewModel.swift in Sources */,
+				784360D92A44BB43009962D5 /* HotelModel.swift in Sources */,
+				784B1CEC2A46011E00C9D553 /* PlaceModel.swift in Sources */,
 				784360912A44A9C8009962D5 /* AppDelegate.swift in Sources */,
+				78ED75EC2A483C3700FC75D6 /* HomeView.swift in Sources */,
+				784360D22A44B368009962D5 /* NetworkService.swift in Sources */,
+				784360E42A45C66F009962D5 /* WeatherModel.swift in Sources */,
+				78ED75DB2A47107700FC75D6 /* SplashVC.swift in Sources */,
+				784360CF2A44B34A009962D5 /* HTTPMethod.swift in Sources */,
+				784360D72A44B6D7009962D5 /* TravelRequest.swift in Sources */,
 				784360932A44A9C8009962D5 /* SceneDelegate.swift in Sources */,
+				784360CD2A44B33E009962D5 /* ErrorResponse.swift in Sources */,
+				784360C92A44B32A009962D5 /* DataRequest.swift in Sources */,
+				784360D52A44B49D009962D5 /* APIRequest.swift in Sources */,
+				784360DC2A45BA23009962D5 /* RestaurantModel.swift in Sources */,
+				784360DE2A45BF1E009962D5 /* AttractionModel.swift in Sources */,
+				784360E12A45C60B009962D5 /* WeatherRequest.swift in Sources */,
+				78ED75F12A48474A00FC75D6 /* CardView.swift in Sources */,
+				78ED75E32A472C9300FC75D6 /* SplashView.swift in Sources */,
+				784360CB2A44B333009962D5 /* Endpoint.swift in Sources */,
+				784B1CEA2A45FC4400C9D553 /* PlaceRequest.swift in Sources */,
+				78ED75E62A4831B700FC75D6 /* UserLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -642,6 +850,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78ED75ED2A4840A000FC75D6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78ED75EE2A4840A000FC75D6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78ED75ED2A4840A000FC75D6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 784360852A44A9C8009962D5 /* Project object */;
 }
