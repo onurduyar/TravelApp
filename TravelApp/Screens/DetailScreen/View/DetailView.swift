@@ -27,7 +27,11 @@ class DetailView: UIView {
             make.edges.equalToSuperview()
         }
     }
-
     
+    func refresh(){
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
     
 }

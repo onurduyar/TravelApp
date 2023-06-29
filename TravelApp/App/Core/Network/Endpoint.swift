@@ -20,6 +20,10 @@ enum Endpoint {
     enum Geoapify: String{
         case version = "/v2"
         case places = "/places"
+        case airport = "airport"
+        case trainStation = "public_transport.train"
+        case shoppingMall = "commercial.shopping_mall"
+        case superMarket = "commercial.supermarket"
     }
 }
 

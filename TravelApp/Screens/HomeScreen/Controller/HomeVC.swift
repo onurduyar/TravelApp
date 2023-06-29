@@ -63,11 +63,14 @@ extension HomeVC: HomeViewDelegate{
     func didSelectShoppingRectangle(withTag tag: Int) {
         switch tag {
         case 0:
-            print("shopping mal")
-            navigationController?.pushViewController(DetailVC(), animated: true)
+            let destionationVC = DetailVC<PlaceModel>()
+            destionationVC.typeOfPlace = Endpoint.Geoapify.shoppingMall.rawValue
+            navigationController?.pushViewController(destionationVC, animated: true)
             break
         case 1:
-            print("supermarket")
+            let destionationVC = DetailVC<PlaceModel>()
+            destionationVC.typeOfPlace = Endpoint.Geoapify.superMarket.rawValue
+            navigationController?.pushViewController(destionationVC, animated: true)
             break
         default:
             break
@@ -77,10 +80,14 @@ extension HomeVC: HomeViewDelegate{
     func didSelectTransportationRectangle(withTag tag: Int) {
         switch tag {
         case 0:
-            print("airport")
+            let destionationVC = DetailVC<PlaceModel>()
+            destionationVC.typeOfPlace = Endpoint.Geoapify.airport.rawValue
+            navigationController?.pushViewController(destionationVC, animated: true)
             break
         case 1:
-            print("trainstation")
+            let destionationVC = DetailVC<PlaceModel>()
+            destionationVC.typeOfPlace = Endpoint.Geoapify.trainStation.rawValue
+            navigationController?.pushViewController(destionationVC, animated: true)
             break
         default:
             break
@@ -90,21 +97,16 @@ extension HomeVC: HomeViewDelegate{
     func didSelectCircle(withTag tag: Int) {
         switch tag {
         case 0:
-            print("hostel")
+            navigationController?.pushViewController(DetailVC<HotelModel>(), animated: true)
             break
         case 1:
-            print("restaurant")
+            navigationController?.pushViewController(DetailVC<RestaurantModel>(), animated: true)
             break
         case 2:
-            print("attractions")
+            navigationController?.pushViewController(DetailVC<AttractionModel>(), animated: true)
             break
         default:
             break
         }
-    }
-}
-class ViewController2: UIViewController{
-    override func viewDidLoad() {
-        view.backgroundColor = .red
     }
 }

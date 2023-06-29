@@ -10,6 +10,7 @@ import Foundation
 struct PlaceRequest: APIRequest {
     let appID: String
     var lat,lon: String
+    var endpoint: String
     
     typealias Response = PlaceModel
     var baseURL: String{
@@ -25,13 +26,14 @@ struct PlaceRequest: APIRequest {
         [
             "apiKey": appID,
             "limit": "20",
-            "categories": "catering.restaurant",
+            "categories": endpoint,
             "bias": "proximity:\(lon),\(lat)"
         ]
     }
-    init(lat: String, lon: String) {
+    init(endpoint: String,lat: String, lon: String) {
         self.lat = lat
         self.lon = lon
+        self.endpoint = endpoint
         guard let apiKey = ProcessInfo.processInfo.environment["geoapifyAPI_KEY"] else {
             fatalError(ErrorResponse.apiKeyMissing.rawValue)
         }
