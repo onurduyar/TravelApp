@@ -19,12 +19,13 @@ struct RestaurantModel: Decodable {
 struct Restaurant: Decodable {
     let locationID, name, latitude, longitude: String?
     let numReviews, timezone, locationString: String?
-
+    let photo: Photo?
     enum CodingKeys: String, CodingKey {
         case locationID = "location_id"
         case name, latitude, longitude
         case numReviews = "num_reviews"
         case timezone
         case locationString = "location_string"
+        case photo
     }
 }

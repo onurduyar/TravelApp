@@ -18,9 +18,9 @@ struct AttractionModel: Decodable {
 }
 struct Attraction: Decodable {
     let locationID, name, latitude, longitude: String?
-
+    let photo: Photo?
     enum CodingKeys: String, CodingKey {
         case locationID = "location_id"
-        case name, latitude, longitude
+        case name, latitude, longitude, photo
     }
 }

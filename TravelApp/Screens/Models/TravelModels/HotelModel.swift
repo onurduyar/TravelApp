@@ -14,9 +14,10 @@ struct HotelModel: Decodable {
 }
 struct Hotel: Decodable {
     let locationID, name, latitude, longitude: String?
+    let photo: Photo?
     enum CodingKeys: String, CodingKey {
         case locationID = "location_id"
-        case name, latitude, longitude
+        case name, latitude, longitude,photo
     }
 }
 struct Paging: Decodable {
@@ -40,5 +41,37 @@ struct Status: Decodable {
         case auctionKey = "auction_key"
         case primaryGeo = "primary_geo"
         case pricing, doubleClickZone
+    }
+}
+
+struct Photo: Decodable {
+    let images: Images?
+    let isBlessed: Bool?
+    let caption, id, helpfulVotes: String?
+    let user: User?
+
+    enum CodingKeys: String, CodingKey {
+        case images
+        case isBlessed = "is_blessed"
+        case caption, id
+        case helpfulVotes = "helpful_votes"
+        case user
+    }
+}
+struct Images: Decodable {
+    let small, thumbnail, original, large: Large?
+    let medium: Large?
+}
+struct Large: Decodable {
+    let width: String?
+    let url: String?
+    let height: String?
+}
+struct User: Decodable {
+    let memberID, type: String?
+
+    enum CodingKeys: String, CodingKey {
+        case memberID = "member_id"
+        case type
     }
 }

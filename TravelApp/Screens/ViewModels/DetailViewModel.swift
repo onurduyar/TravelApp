@@ -42,7 +42,7 @@ final class DetailViewModel<T: Decodable> {
             case .success(let response):
                 self.modelResponse = response
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
                 self.delegate?.travelDataDidFail(self, withError: error)
             }
         }

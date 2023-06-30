@@ -26,7 +26,8 @@ class DetailCell: UITableViewCell {
     let detailTitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.numberOfLines = 5
+        label.font = UIFont.boldSystemFont(ofSize: 12)
         return label
     }()
     
@@ -34,7 +35,7 @@ class DetailCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 10.0
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+       
         return imageView
     }()
     
@@ -45,28 +46,46 @@ class DetailCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
     }
-    
     private func setupViews() {
         contentView.layer.cornerRadius = 25
         contentView.layer.masksToBounds = true
         contentView.layer.borderWidth = 1.0
         contentView.layer.borderColor = UIColor.black.cgColor
         
-        contentView.addSubview(detailTitleLabel)
-        detailTitleLabel.snp.makeConstraints { make in
+        let imageViewContainer = UIView()
+        contentView.addSubview(imageViewContainer)
+        imageViewContainer.layer.cornerRadius = 10.0
+        imageViewContainer.snp.makeConstraints { make in
+            make.centerY.equalTo(contentView)
+            make.left.equalTo(contentView).offset(padding)
+            make.width.equalTo(contentView.snp.width).multipliedBy(0.5)
             make.top.equalTo(contentView).offset(padding)
-            make.right.left.equalTo(contentView).offset(padding)
+            make.bottom.equalTo(contentView).offset(-padding)
         }
         
-        contentView.addSubview(detailImageView)
+        imageViewContainer.addSubview(detailImageView)
         detailImageView.snp.makeConstraints { make in
-            make.top.equalTo(detailTitleLabel.snp.bottom).offset(padding)
-            make.right.left.equalTo(contentView).offset(padding)
-            make.height.equalTo(80)
+            make.center.equalTo(imageViewContainer)
+            make.width.height.equalTo(100)
+        }
+        
+        let titleContainer = UIView()
+        contentView.addSubview(titleContainer)
+        titleContainer.snp.makeConstraints { make in
+            make.top.equalTo(contentView).offset(padding)
+            make.width.equalTo(contentView.snp.width).multipliedBy(0.25)
+            make.right.equalTo(contentView).offset(-padding)
+            make.bottom.lessThanOrEqualTo(contentView).offset(-padding)
+        }
+        
+        titleContainer.addSubview(detailTitleLabel)
+        detailTitleLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(titleContainer)
+            make.left.right.equalTo(titleContainer)
         }
     }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,8 +94,8 @@ class DetailCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: interCellSpacing, left: interCellSpacing, bottom: interCellSpacing, right: interCellSpacing))
