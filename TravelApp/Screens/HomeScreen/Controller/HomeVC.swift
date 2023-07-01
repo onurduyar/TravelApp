@@ -97,7 +97,10 @@ extension HomeVC: HomeViewDelegate{
     func didSelectCircle(withTag tag: Int) {
         switch tag {
         case 0:
-            navigationController?.pushViewController(DetailVC<HotelModel>(), animated: true)
+            let destionationVC = DetailVC<PlaceModel>()
+            destionationVC.typeOfPlace = Endpoint.Geoapify.hotel.rawValue
+            navigationController?.pushViewController(destionationVC, animated: true)
+           // navigationController?.pushViewController(DetailVC<HotelModel>(), animated: true)
             break
         case 1:
             navigationController?.pushViewController(DetailVC<RestaurantModel>(), animated: true)

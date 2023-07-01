@@ -24,6 +24,7 @@ enum Endpoint {
         case trainStation = "public_transport.train"
         case shoppingMall = "commercial.shopping_mall"
         case superMarket = "commercial.supermarket"
+        case hotel = "accommodation.hotel"
     }
 }
 

@@ -93,24 +93,47 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let hotels = selectedData as? HotelModel {
             let hotel = hotels.data?[indexPath.row]
-            if let hotelName = hotel?.name {
-                print("Selected Hotel Name: \(hotelName)")
-            }
+            let hotelData: Hotel? =  hotel
+            let placeDetailVC = PlaceDetailVC<Hotel>()
+            placeDetailVC.selectedData = hotelData
+            navigationController?.pushViewController(placeDetailVC, animated: true)
         } else if let restaurants = selectedData as? RestaurantModel {
             let restaurant = restaurants.data?[indexPath.row]
-            if let restaurantName = restaurant?.name {
-                print("Selected Restaurant Name: \(restaurantName)")
-            }
+            let restaurantData: Restaurant? =  restaurant
+            let placeDetailVC = PlaceDetailVC<Restaurant>()
+            placeDetailVC.selectedData = restaurantData
+            navigationController?.pushViewController(placeDetailVC, animated: true)
         } else if let attractions = selectedData as? AttractionModel {
             let attraction = attractions.data?[indexPath.row]
-            if let attractionName = attraction?.name {
-                print("Selected Attraction Name: \(attractionName)")
-            }
+            let attractionData: Attraction? =  attraction
+            let placeDetailVC = PlaceDetailVC<Attraction>()
+            placeDetailVC.selectedData = attractionData
+            navigationController?.pushViewController(placeDetailVC, animated: true)
         } else if let places = selectedData as? PlaceModel {
             let feature = places.features?[indexPath.row]
-            if let placeName = feature?.properties?.name {
-                print("Selected Place Name: \(placeName)")
+            let placeDetailVC = PlaceDetailVC<Feature>()
+            placeDetailVC.selectedData = feature
+            switch typeOfPlace {
+            case Endpoint.Geoapify.airport.rawValue:
+                placeDetailVC.placePhoto = "airport_icon"
+                break
+            case Endpoint.Geoapify.trainStation.rawValue:
+                placeDetailVC.placePhoto = "trainstation_icon"
+                break
+            case Endpoint.Geoapify.shoppingMall.rawValue:
+                placeDetailVC.placePhoto = "shoppingmall_icon"
+                break
+            case Endpoint.Geoapify.superMarket.rawValue:
+                placeDetailVC.placePhoto = "supermarket_icon"
+                break
+            case Endpoint.Geoapify.hotel.rawValue:
+                placeDetailVC.placePhoto = "hostel_icon"
+                break
+
+            default:
+                break
             }
+            navigationController?.pushViewController(placeDetailVC, animated: true)
         }
     }
     
@@ -164,6 +187,11 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
                     cell.image = UIImage(named: "supermarket_icon")
                 }
                 break
+            case Endpoint.Geoapify.hotel.rawValue:
+                DispatchQueue.main.async {
+                    cell.image = UIImage(named: "hostel_icon")
+                }
+                break
             default:
                 break
             }
@@ -180,7 +208,7 @@ extension DetailVC: LocationManagerDelegate{
     func didUpdateLocation(latitude: String, longitude: String) {
         switch T.self {
         case is HotelModel.Type:
-            detailViewModel.fetchTravelAPI(type: "hotels", latitude: latitude, longitude: longitude)
+            //detailViewModel.fetchTravelAPI(type: "hotels", latitude: latitude, longitude: longitude)
             break
         case is RestaurantModel.Type:
             detailViewModel.fetchTravelAPI(type: "restaurants", latitude: latitude, longitude: longitude)
