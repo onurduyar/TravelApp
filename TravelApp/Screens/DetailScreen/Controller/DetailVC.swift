@@ -70,9 +70,10 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
         super.viewDidLoad()
         view = detailView
         
-      
+        
         detailView.tableView.delegate = self
         detailView.tableView.dataSource = self
+        detailView.delegate = self
         
         detailViewModel.delegate = self
         locationManager.delegate = self
@@ -129,7 +130,7 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
             case Endpoint.Geoapify.hotel.rawValue:
                 placeDetailVC.placePhoto = "hostel_icon"
                 break
-
+                
             default:
                 break
             }
@@ -165,7 +166,7 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
         } else if let places = selectedData as? PlaceModel {
             let feature = places.features?[indexPath.row]
             cell.detailText = feature?.properties?.name ?? "No information."
-        
+            
             switch typeOfPlace {
             case Endpoint.Geoapify.airport.rawValue:
                 DispatchQueue.main.async {
@@ -205,6 +206,16 @@ final class DetailVC<T: Decodable>: UIViewController,UITableViewDelegate,UITable
 }
 
 extension DetailVC: LocationManagerDelegate{
+    func didfail(error: Error) {
+        let alertController = UIAlertController(title: "Error", message: "Please,enable location permission", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     func didUpdateLocation(latitude: String, longitude: String) {
         switch T.self {
         case is HotelModel.Type:
@@ -238,6 +249,11 @@ extension DetailVC: DetailViewModelDelegate{
     func travelDataDidFail<T>(_ viewModel: DetailViewModel<T>, withError error: Error) where T : Decodable {
         print(error.localizedDescription)
     }
-    
-    
+}
+extension DetailVC: PlaceDetailVCDelegate{
+    func showOnMapButtonTapped() {
+        let mapVC = MapVC<T>()
+        mapVC.selectedData = selectedData
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
 }

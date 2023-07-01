@@ -65,10 +65,11 @@ extension LocationManager: CLLocationManagerDelegate{
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        fatalError(error.localizedDescription)
+        delegate?.didfail(error: error)
     }
 }
 
 protocol LocationManagerDelegate: AnyObject {
     func didUpdateLocation(latitude: String, longitude: String)
+    func didfail(error: Error)
 }

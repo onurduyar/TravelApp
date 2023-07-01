@@ -42,7 +42,7 @@ extension HomeVC: WeatherViewModelDelegate {
     func weatherDataDidChange(_ viewModel: HomeViewModel) {
         DispatchQueue.main.async {
             self.currentCity = viewModel.city
-
+            
         }
     }
     func weatherDataFetchDidFail(_ viewModel: HomeViewModel, withError error: Error) {
@@ -56,6 +56,15 @@ extension HomeVC: WeatherViewModelDelegate {
 extension HomeVC: LocationManagerDelegate{
     func didUpdateLocation(latitude: String, longitude: String) {
         homeViewModel.fetchWeatherData(lat: latitude, lon: longitude)
+    }
+    func didfail(error: Error) {
+        let alertController = UIAlertController(title: "Error", message: "Please,enable location permission", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 // MARK: - HomeViewDelegate
@@ -100,7 +109,7 @@ extension HomeVC: HomeViewDelegate{
             let destionationVC = DetailVC<PlaceModel>()
             destionationVC.typeOfPlace = Endpoint.Geoapify.hotel.rawValue
             navigationController?.pushViewController(destionationVC, animated: true)
-           // navigationController?.pushViewController(DetailVC<HotelModel>(), animated: true)
+            // navigationController?.pushViewController(DetailVC<HotelModel>(), animated: true)
             break
         case 1:
             navigationController?.pushViewController(DetailVC<RestaurantModel>(), animated: true)

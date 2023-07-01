@@ -13,6 +13,53 @@ class MapVC<T: Decodable>: UIViewController {
     var index: Int?
     var selectedData: T? {
         didSet {
+            if let hotelmodel = selectedData as? HotelModel {
+                if let hotelArray = hotelmodel.data {
+                    for element in hotelArray {
+                        if let lat = element.latitude, let lon = element.longitude {
+                            let coordinate = CLLocationCoordinate2D(latitude: Double(lat) ?? 0.0, longitude: Double(lon) ?? 0.0)
+                            mapView.showAnnotation(coordinate: coordinate)
+                            mapView.itemName = element.name
+                        }
+                    }
+                }
+            }
+            if let restaurantModel = selectedData as? RestaurantModel {
+                if let restaurantArray = restaurantModel.data {
+                    for element in restaurantArray {
+                        if let lat = element.latitude, let lon = element.longitude {
+                            let coordinate = CLLocationCoordinate2D(latitude: Double(lat) ?? 0.0, longitude: Double(lon) ?? 0.0)
+                            mapView.showAnnotation(coordinate: coordinate)
+                            mapView.itemName = element.name
+                        }
+                    }
+                }
+            }
+
+            if let attractionModel = selectedData as? AttractionModel {
+                if let attractionArray = attractionModel.data {
+                    for element in attractionArray {
+                        if let lat = element.latitude, let lon = element.longitude {
+                            let coordinate = CLLocationCoordinate2D(latitude: Double(lat) ?? 0.0, longitude: Double(lon) ?? 0.0)
+                            mapView.showAnnotation(coordinate: coordinate)
+                            mapView.itemName = element.name
+                        }
+                    }
+                }
+            }
+            
+            if let placeModel = selectedData as? PlaceModel {
+                if let placeArray = placeModel.features {
+                    for element in placeArray {
+                        if let lat = element.properties?.lat, let lon = element.properties?.lon {
+                            let coordinate = CLLocationCoordinate2D(latitude: Double(lat), longitude: Double(lon) )
+                            mapView.showAnnotation(coordinate: coordinate)
+                            mapView.itemName = element.properties?.name
+                        }
+                    }
+                }
+            }
+            
             if let hotelData = selectedData as? Hotel {
                 print(hotelData)
                 if let lat = hotelData.latitude, let lon = hotelData.longitude {

@@ -33,14 +33,13 @@ class MapView: UIView {
     private func setupConstraints() {
         mapView.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalTo(self.layoutMarginsGuide.snp.top)
         }
     }
     
     func showAnnotation(coordinate: CLLocationCoordinate2D) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
-        mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(annotation)
         mapView.setCenter(coordinate, animated: true)
         
@@ -64,34 +63,19 @@ class MapView: UIView {
 }
 
 extension MapView: MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let selectedAnnotation = view.annotation as? MKPointAnnotation {
-            let latitude = selectedAnnotation.coordinate.latitude
-            let longitude = selectedAnnotation.coordinate.longitude
-            let requestLocation = CLLocation(latitude: latitude, longitude: longitude)
-            CLGeocoder().reverseGeocodeLocation(requestLocation) { placemarks, error in
-                if let placemark = placemarks {
-                    if placemark.count > 0 {
-                        let newPlacemark = MKPlacemark(placemark: placemark[0])
-                        let item = MKMapItem(placemark: newPlacemark)
-                        item.name = selectedAnnotation.title
-                        let launchOption = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-                        item.openInMaps(launchOptions: launchOption)
-                    }
-                }
-            }
-        }
-    }
+  
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
         
         let reuseIdentifier = "CustomAnnotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MKPinAnnotationView
-        annotationView?.pinTintColor = .blue
+        
         if annotationView == nil {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            annotationView?.pinTintColor = .blue
         } else {
             annotationView?.annotation = annotation
+            annotationView?.pinTintColor = .blue
         }
         
         return annotationView

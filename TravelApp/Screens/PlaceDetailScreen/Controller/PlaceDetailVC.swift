@@ -38,8 +38,6 @@ class PlaceDetailVC<T: Decodable>: UIViewController {
                 print(placeData)
                 placeDetailView.addressTitle = placeData.properties?.name ?? ""
                 placeDetailView.address = placeData.properties?.addressLine2 ?? ""
-                
-               
             }
         }
     }
