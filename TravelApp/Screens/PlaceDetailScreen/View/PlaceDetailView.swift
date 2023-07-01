@@ -24,7 +24,7 @@ class PlaceDetailView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textAlignment = .center
         return label
     }()
@@ -32,7 +32,7 @@ class PlaceDetailView: UIView {
     private let addressLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.textAlignment = .center
         label.numberOfLines = 5
         return label
